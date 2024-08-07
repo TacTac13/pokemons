@@ -1,0 +1,9 @@
+.card {
+  min-width: 250px;
+  min-height: 200px;
+  margin-bottom: 25px;
+  flex: 1 1 calc(33.333% - 20px); /* Ajustez la largeur pour avoir 3 cartes par ligne */
+  box-sizing: border-box;
+  margin: 10px;
+  cursor: pointer;
+}

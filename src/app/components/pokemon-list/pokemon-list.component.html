@@ -1,0 +1,10 @@
+<div *ngIf="isLoading" class="spinner"><mat-spinner></mat-spinner></div>
+<div class="pokemon-container" *ngIf="!isLoading">
+  <div class="card-list">
+    <app-pokemon-card *ngFor="let pokemon of pokemonsList$ | async" [name]="pokemon.name"
+      [imgUrl]="pokemon.details.sprites.front_default" [weigth]="pokemon.details.weight"
+      [heigth]="pokemon.details.height" (click)="goToPokemonDetails(pokemon.name)">
+    </app-pokemon-card>
+  </div>
+  <mat-paginator [pageSizeOptions]="[10, 25, 50]"></mat-paginator>
+</div>
